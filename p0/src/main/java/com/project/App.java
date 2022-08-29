@@ -23,7 +23,7 @@ public class App
         
 
         if (conn != null){
-        System.out.println("Successful connection!");
+        System.out.println("Connection Successful!");
         }
         conn.close();
 
