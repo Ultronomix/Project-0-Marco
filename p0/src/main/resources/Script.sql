@@ -134,6 +134,21 @@ on branch.id = faculty.branch_id
 ;
 
 
+select student.first_name as student_first_name,
+student.last_name as student_last_name,
+student.email as student_email,
+student."password" as student_password,
+faculty.name as faculty_name,
+program.name as program_name ,
+program.duration as program_duration,
+
+from student 
+join faculty
+on student.faculty_id = faculty.id 
+join "program"
+on student.program_id = program.id
+;
+
 drop table student ;
 
 
