@@ -9,9 +9,8 @@ public class Student {
     private String lastName;
     private String email;
     private String password;
-    private String facultyName;
     private String programName;
-    private String programDuration;
+    private String facultyName;
 
     public String getId(){
         return id;
@@ -62,24 +61,18 @@ public class Student {
         this.programName = programName ;
     }
 
-    public String getProgramDuration(){
-        return programDuration;
-    }
-    public void setProgramDuration(String programDuration){
-        this.programDuration = programDuration ;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return Objects.equals(id, student.id) && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(email, student.email) && Objects.equals(password, student.password) && Objects.equals(facultyName, student.facultyName) && Objects.equals(programName, student.programName) && Objects.equals(programDuration, student.programDuration);
+        return Objects.equals(id, student.id) && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(email, student.email) && Objects.equals(password, student.password) && Objects.equals(facultyName, student.facultyName) && Objects.equals(programName, student.programName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email, password, facultyName, programName, programDuration);
+        return Objects.hash(id, firstName, lastName, email, password, programName, facultyName);
     }
 
     @Override
@@ -90,9 +83,8 @@ public class Student {
                 "lastname='" + lastName + '\'' + "\n" +
                 "email='" + email + '\'' + "\n" +
                 "password='" + password + '\'' + "\n" +
+                "programname='" + programName + '\'' + "\n" +
                 "facultyname='" + facultyName + '\'' + "\n" +
-                "programname='" + programName + "\n" +
-                "programduration='" + programDuration + '\'' + "\n" +
                 '}';
     }
 }
