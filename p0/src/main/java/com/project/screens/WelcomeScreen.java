@@ -27,8 +27,8 @@ public class WelcomeScreen extends Abstractscreen {
             case "2" : new EnrollScreen(reader).render();
             break;
 
-            case "3" :
-            System.out.println("Deleting a student");
+            case "3" : new DeleteScreen(reader).render();
+            
             break;
 
             case "4" :

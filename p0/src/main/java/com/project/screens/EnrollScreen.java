@@ -9,7 +9,7 @@ import com.project.students.StudentDAO;
 public class EnrollScreen extends Abstractscreen {
 
     public EnrollScreen(BufferedReader reader) {
-        super("Print Screen", reader);
+        super("Enroll screen", reader);
 
     }
 
@@ -123,6 +123,7 @@ public class EnrollScreen extends Abstractscreen {
             StudentDAO sDao = new StudentDAO();
            String newStudentId = sDao.enrollNewStudent(student, facultySelection);
            System.out.println("Student successfully persisted! Generated id: " + newStudentId);
+           
            formComplete = true;
         }
     }

@@ -130,4 +130,23 @@ public class StudentDAO {
 
         return student.getId();
     }
+
+    public int deleteStudent(String id) {
+
+        String sql = "delete from student where id ="+id;
+        int affectedRows=0;
+
+        try(Connection conn = ConnectionFactory.getInstent().getConnection()) {
+            
+            PreparedStatement pStat = conn.prepareStatement(sql);
+
+            affectedRows = pStat.executeUpdate();
+          
+
+        }catch(SQLException e){
+            System.out.println("Something went wrong when communicating with the database");
+            e.printStackTrace();
+        }
+        return affectedRows;
+    }
 }
